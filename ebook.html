@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>免費電子書｜全球企業英文面試指南</title>
+<meta name="description" content="說得好，才值錢 — 全球企業英文面試指南。免費下載。">
+<style>
+:root{--bg:#0b0d12;--card:#161a22;--ink:#eef1f5;--mut:#9aa3af;--line:#242a35;
+--gold:#ffce5c;--grn:#39d98a;--blu:#7fd1ff;}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(1100px 560px at 50% -10%,#1a2336,#0b0d12);
+color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"PingFang TC","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+min-height:100vh;display:flex;align-items:center;justify-content:center;padding:34px 18px}
+.wrap{max-width:560px;width:100%}
+.kicker{color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-align:center;margin-bottom:10px}
+h1{font-size:30px;line-height:1.25;margin:0 0 6px;text-align:center;letter-spacing:-.3px}
+.h1en{font-size:15px;color:var(--mut);text-align:center;margin:0 0 22px;font-weight:500}
+.cover{display:block;width:188px;margin:0 auto 22px;border-radius:12px;box-shadow:0 18px 44px rgba(0,0,0,.5)}
+.bullets{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 22px}
+.bullets div{display:flex;gap:10px;align-items:flex-start;font-size:15px;margin:7px 0}
+.bullets .b-en{color:var(--mut);font-size:12.5px;margin-left:26px;margin-top:-4px}
+.tick{color:var(--grn);font-weight:800}
+form{display:flex;flex-direction:column;gap:11px}
+input{width:100%;padding:15px 16px;border-radius:11px;border:1px solid var(--line);
+background:#0f141d;color:var(--ink);font-size:16px;outline:none}
+input:focus{border-color:var(--blu)}
+button{margin-top:4px;padding:16px;border:0;border-radius:11px;background:linear-gradient(180deg,#ffd874,#ffbe33);
+color:#1a1300;font-size:17px;font-weight:800;cursor:pointer;transition:.15s}
+button:hover{filter:brightness(1.05)}
+button:disabled{opacity:.6;cursor:default}
+.fine{color:var(--mut);font-size:12px;text-align:center;margin-top:12px}
+.err{color:#ff8b8b;font-size:13.5px;text-align:center;min-height:16px}
+.done{display:none;text-align:center}
+.done h2{font-size:24px;margin:6px 0 4px}
+.done p{color:var(--mut);font-size:14px;margin:0 0 20px}
+.dl{display:flex;flex-direction:column;gap:10px}
+.dl a{display:flex;justify-content:space-between;align-items:center;text-decoration:none;
+background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 18px;color:var(--ink);font-weight:700;transition:.15s}
+.dl a:hover{border-color:var(--gold);transform:translateY(-2px)}
+.dl a span.sub{color:var(--mut);font-weight:500;font-size:12.5px}
+.dl a .arrow{color:var(--gold);font-size:18px}
+</style></head>
+<body><div class="wrap">
+
+  <div id="offer">
+    <div class="kicker">免費電子書 · FREE EBOOK</div>
+    <h1>說得好，才值錢</h1>
+    <div class="h1en">全球企業英文面試指南 · The Global Business English Interview Guide</div>
+    <img class="cover" src="./ebooks/cover.jpg" alt="ebook cover" onerror="this.style.display='none'">
+    <div class="bullets">
+      <div><span class="tick">✓</span><span>學會用西方企業的方式表達，不只是「英文好」</span></div>
+      <div class="b-en">Present the way Western companies expect, not just "good English"</div>
+      <div><span class="tick">✓</span><span>面試框架、實戰例句、可直接套用的回答結構</span></div>
+      <div class="b-en">Interview frameworks, real example answers, ready-to-use structures</div>
+      <div><span class="tick">✓</span><span>繁體 · 简体 · English 三種版本，馬上下載</span></div>
+      <div class="b-en">Traditional, Simplified &amp; English versions, instant download</div>
+    </div>
+
+    <form id="f">
+      <input id="name" type="text" placeholder="你的名字 · Your name" autocomplete="given-name" required>
+      <input id="email" type="email" placeholder="你的 Email · Your email" autocomplete="email" required>
+      <button id="btn" type="submit">免費領取電子書 · Get the free ebook</button>
+      <div class="err" id="err"></div>
+    </form>
+    <div class="fine">我們會把電子書寄到你的信箱，並附上更多面試資源。<br>We'll email you the ebook plus more interview resources. No spam.</div>
+  </div>
+
+  <div id="done" class="done">
+    <div style="font-size:46px">🎉</div>
+    <h2>搞定了！這就是你的電子書</h2>
+    <p>也已經寄到你的信箱了 · Also sent to your inbox</p>
+    <div class="dl">
+      <a href="./ebooks/interview-ebook-TW.pdf" download><span>繁體中文版<br><span class="sub">Traditional Chinese</span></span><span class="arrow">↓</span></a>
+      <a href="./ebooks/interview-ebook-CN.pdf" download><span>简体中文版<br><span class="sub">Simplified Chinese</span></span><span class="arrow">↓</span></a>
+      <a href="./ebooks/interview-ebook-EN.pdf" download><span>English version<br><span class="sub">英文版</span></span><span class="arrow">↓</span></a>
+    </div>
+  </div>
+
+</div>
+<script>
+// Kit (ConvertKit) form capture. FORM_ID is patched after the Kit form is created.
+var KIT_FORM_ID = "__KIT_FORM_ID__";
+var f = document.getElementById('f'), btn = document.getElementById('btn'), err = document.getElementById('err');
+function reveal(){ document.getElementById('offer').style.display='none'; document.getElementById('done').style.display='block'; window.scrollTo(0,0); }
+f.addEventListener('submit', function(e){
+  e.preventDefault();
+  err.textContent='';
+  var email=document.getElementById('email').value.trim();
+  var name=document.getElementById('name').value.trim();
+  if(!email){ err.textContent='請輸入 Email'; return; }
+  btn.disabled=true; btn.textContent='處理中… · Sending…';
+  fetch('https://app.kit.com/forms/'+KIT_FORM_ID+'/subscriptions',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({email_address:email, first_name:name})
+  }).then(function(r){ return r.json().catch(function(){return {};}); })
+    .then(function(){ reveal(); })
+    .catch(function(){
+      // Even if the network call is blocked, still give them the book — capture is best-effort.
+      reveal();
+    });
+});
+</script>
+</body></html>
