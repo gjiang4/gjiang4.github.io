@@ -22,9 +22,18 @@ h1{font-size:26px;margin:0 0 4px}.sub{color:var(--mut);margin:0 0 22px;font-size
 .rung{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin:9px 0;color:var(--ink);text-decoration:none;font-weight:600}
 .rung span{display:block;color:var(--mut);font-weight:400;font-size:12px;margin-top:2px}
 .rung:active{border-color:var(--acc)}
+.pdfbtn{display:block;width:100%;background:#222836;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 18px;font-size:15px;font-weight:600;cursor:pointer}
+@media print{
+  body{background:#fff;color:#000}
+  .word,.rung{background:#fff;border-color:#ccc;break-inside:avoid}
+  .play,.pdfbtn{display:none}
+  .ipa,.syl,.fam,.note,.lead-en,.rung span{color:#555}.pos{color:#000}
+  .cta{border-top:1px solid #ccc}
+}
 </style></head><body><div class="wrap">
 <h1>七月詞彙表 📚 July Vocab List</h1>
 <p class="sub">這個月影片教過的字，按最新排序。點 ▶ 聽發音和例句。Tap ▶ to hear the word and examples.</p>
+<button class="pdfbtn" onclick="window.print()">⬇ 存成 PDF（無音檔）· Save as PDF</button>
 <div class="word">
   <div class="whead">
     <span class="num">01</span>
