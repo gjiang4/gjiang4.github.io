@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>日常英語口說 · Daily Life English (繁體版)</title>
+<style>
+:root{
+  --bg:#0c0e13;
+  --card:#171b23;
+  --line:#262c38;
+  --ink:#f2f4f8;
+  --mut:#9aa3b0;
+  --dim:#6e7683;
+  --gold:#e6b84b;
+  --gold-dark:#c99a2e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:radial-gradient(900px 480px at 50% -8%, #1a2130, var(--bg));
+  color:var(--ink);
+  font-family:-apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size:17px;
+  line-height:1.55;
+  min-height:100vh;
+  padding:40px 16px 64px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{width:100%;max-width:760px;margin:0 auto}
+header{text-align:center;margin-bottom:28px}
+.mark{
+  width:72px;height:72px;border-radius:50%;
+  margin:0 auto 14px;
+  display:flex;align-items:center;justify-content:center;
+  background:#151922;
+  border:2px solid var(--gold);
+  color:var(--gold);
+  font-size:24px;font-weight:800;letter-spacing:1px;
+}
+h1{font-size:26px;letter-spacing:-.2px;margin-bottom:4px}
+.sub{color:var(--gold);font-size:16px;font-weight:600}
+.sub-en{color:var(--mut);font-size:13.5px;margin-top:3px}
+.note{color:var(--dim);font-size:12.5px;margin-top:10px}
+
+.toc{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+  gap:8px;
+  margin:26px 0 8px;
+}
+.toc a{
+  display:block;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:9px 10px;
+  color:var(--ink);
+  text-decoration:none;
+  font-size:13.5px;
+  font-weight:600;
+  text-align:center;
+  transition:border-color .12s ease;
+}
+.toc a:hover{border-color:var(--gold)}
+.toc a .en{display:block;color:var(--dim);font-size:10.5px;font-weight:500;margin-top:1px}
+
+section{margin-top:36px}
+.sec-head{
+  border-left:3px solid var(--gold);
+  padding-left:12px;
+  margin-bottom:14px;
+}
+.sec-head h2{font-size:21px;line-height:1.3}
+.sec-head .en{color:var(--mut);font-size:13.5px;margin-top:2px}
+
+.lesson{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px 14px 12px;
+  margin-bottom:14px;
+}
+.lesson .t{font-size:16.5px;font-weight:700}
+.lesson .t-en{color:var(--mut);font-size:12.5px;margin-bottom:10px;margin-top:1px}
+.player{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:10px;
+  overflow:hidden;
+  background:#0a0c10;
+  cursor:pointer;
+}
+.player img.thumb{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  opacity:.55;
+}
+.player .play{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:8px;
+}
+.player .play .btn{
+  width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(135deg, var(--gold), var(--gold-dark));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(230,184,75,.35);
+  transition:transform .12s ease;
+}
+.player:hover .play .btn{transform:scale(1.07)}
+.player .play .btn svg{margin-left:4px}
+.player .play .hint{
+  color:var(--ink);font-size:12.5px;font-weight:600;
+  text-shadow:0 1px 6px rgba(0,0,0,.8);
+}
+.player iframe{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  border:0;
+}
+
+.info-img{
+  display:block;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  margin-bottom:14px;
+}
+.info-img img{display:block;width:100%;height:auto}
+.info-img .cap{padding:10px 14px;font-size:13.5px;font-weight:600}
+.info-img .cap .en{color:var(--mut);font-weight:500;font-size:12px;margin-left:6px}
+
+.docs{margin-top:6px}
+.doc-unit{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 14px;
+  margin-bottom:10px;
+}
+.doc-unit .u{font-size:15px;font-weight:700;margin-bottom:6px}
+.doc-unit .u .en{color:var(--mut);font-weight:500;font-size:12px;margin-left:6px}
+a.doc{
+  display:flex;align-items:center;gap:8px;
+  color:var(--ink);
+  text-decoration:none;
+  font-size:14px;
+  padding:7px 8px;
+  border-radius:8px;
+  transition:background .12s ease;
+}
+a.doc:hover{background:#1e2430}
+a.doc .ico{color:var(--gold);flex:none;display:flex}
+a.doc .en{color:var(--dim);font-size:11.5px;display:block}
+.foot{color:var(--dim);font-size:12px;margin-top:44px;text-align:center}
+@media (max-width:420px){
+  body{padding:28px 12px 48px}
+  h1{font-size:22px}
+  .toc{grid-template-columns:repeat(2, 1fr)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark">TG</div>
+  <h1>日常英語口說</h1>
+  <div class="sub">Daily Life English (繁體版)</div>
+  <div class="sub-en">Speak natural everyday English, taught by Teacher Gary</div>
+  <div class="note">此頁面為課程學員專屬，請勿外流連結。This page is for enrolled students only, please do not share the link.</div>
+</header>
+
+<nav class="toc">
+  <a href="#u1">1. 介紹自己<span class="en">Talking about yourself</span></a>
+  <a href="#u2">2. 問候<span class="en">Greetings and replies</span></a>
+  <a href="#u3">3. 邀請<span class="en">Invitations</span></a>
+  <a href="#u4">4. 閒聊<span class="en">Small Talk</span></a>
+  <a href="#u5">5. 吃飯時刻<span class="en">Time to Eat</span></a>
+  <a href="#u6">6. 搭訕<span class="en">Flirting</span></a>
+  <a href="#u7">7. 購物<span class="en">Shopping</span></a>
+  <a href="#u8">8. 派對時刻<span class="en">Party Time</span></a>
+  <a href="#u9">9. 旅遊和交通<span class="en">Travel</span></a>
+  <a href="#u10">10. 表達感受<span class="en">Feelings</span></a>
+  <a href="#worksheets" style="grid-column:1/-1">單元講義下載<span class="en">Worksheets and handouts</span></a>
+</nav>
+
+<section id="course-info">
+  <div class="sec-head">
+    <h2>課程介紹</h2>
+    <div class="en">Course information</div>
+  </div>
+  <a class="info-img" href="https://drive.google.com/file/d/1afmIsPRZSAxPsyCW8MAGkz8rWdw6gxM3/view" target="_blank" rel="noopener">
+    <img loading="lazy" src="https://drive.google.com/thumbnail?id=1afmIsPRZSAxPsyCW8MAGkz8rWdw6gxM3&amp;sz=w1400" alt="為什麼報名我的課程 Why take this course" onerror="this.style.display='none'">
+    <div class="cap">為什麼報名我的課程？<span class="en">Why take this course (tap to open full size)</span></div>
+  </a>
+  <a class="info-img" href="https://drive.google.com/file/d/1K7DbnjgteaBxmPyd63vTxDhOsr9RxBWe/view" target="_blank" rel="noopener">
+    <img loading="lazy" src="https://drive.google.com/thumbnail?id=1K7DbnjgteaBxmPyd63vTxDhOsr9RxBWe&amp;sz=w1400" alt="課程大綱 Course outline" onerror="this.style.display='none'">
+    <div class="cap">課程大綱<span class="en">Course outline (tap to open full size)</span></div>
+  </a>
+</section>
+
+<section id="u1">
+  <div class="sec-head">
+    <h2>第一單元：介紹自己</h2>
+    <div class="en">Unit 1: Talking about yourself</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="13VPU2xuF7dzHz002zb8nW6aDYPHoVLqx"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">談論你的學業</div>
+    <div class="t-en">Talking about your education</div>
+    <div class="player" data-id="1uTx9JB7V4WJM9h6k_fDH7AGbdjSaGJrL"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">談論你的事業</div>
+    <div class="t-en">Talking about your career</div>
+    <div class="player" data-id="1Xh9v2Y7NKjRLgRPXBR42BjvFLJARnO6u"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">談論你的愛好</div>
+    <div class="t-en">Talking about your hobbies</div>
+    <div class="player" data-id="1a-Swo0d6_WPEKZgQb5iURa4YRiIy8uos"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">談論你的背景、家鄉、國籍</div>
+    <div class="t-en">Talking about your background</div>
+    <div class="player" data-id="1d1qPsgEeWnocX_eaOunE_KRRkhn6TBpH"></div>
+  </div>
+</section>
+
+<section id="u2">
+  <div class="sec-head">
+    <h2>第二單元：問候</h2>
+    <div class="en">Unit 2: Greetings and replies</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="1QdhCp6836wsv1IETvu-wlAzFWpuaausG"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">日常的問候語和回覆語</div>
+    <div class="t-en">Everyday greetings and replies (Video 1)</div>
+    <div class="player" data-id="18ejuo3kPhcBFRzjaYFQU0PerZGPj3wBn"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">隨意且酷酷的問候語以及回覆語</div>
+    <div class="t-en">Casual and cool greetings and replies (Video 2)</div>
+    <div class="player" data-id="1DuYrYX0ZNlXVB6bLbSJ1DwXU3dk5fS35"></div>
+  </div>
+</section>
+
+<section id="u3">
+  <div class="sec-head">
+    <h2>第三單元：邀請</h2>
+    <div class="en">Unit 3: Invitations</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="1i2EQuNQo_f1Fv-bGOw0IsKt_I0EEk-HC"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">如何邀請他人</div>
+    <div class="t-en">Giving an invitation</div>
+    <div class="player" data-id="1UAyq70ZEwkYs0XrDLUZ_SgzRYanPDVNE"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">如何回覆邀請</div>
+    <div class="t-en">Responding to invitations</div>
+    <div class="player" data-id="1TiBulY2jyEyAHDll5ZYq6XxDyqxbg0Vi"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">如何拒絕邀請</div>
+    <div class="t-en">Turning down an invitation (flaking)</div>
+    <div class="player" data-id="1Oda8zRaVx0KPTDPofUfi1Ott0EApA_Sw"></div>
+  </div>
+</section>
+
+<section id="u4">
+  <div class="sec-head">
+    <h2>第四單元：閒聊</h2>
+    <div class="en">Unit 4: Small Talk</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="1lGoDxt5CVOJtFwf-djoDAwihg_Q9vJxK"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">如何談論天氣</div>
+    <div class="t-en">Talking about the weather</div>
+    <div class="player" data-id="1BDiMDmtODaFXc70wLUEQu7Zsjxbs5Rd9"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">詢問他人生活</div>
+    <div class="t-en">Asking about a person's activities</div>
+    <div class="player" data-id="1OcO2wcyoEM9peQY1_CB8OhOyoBzeWlJd"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">讚美他人</div>
+    <div class="t-en">Compliments</div>
+    <div class="player" data-id="1vrK0rg7QcAZqQwS54pT2QnkEdVGsOnDS"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">如何談論時事</div>
+    <div class="t-en">Talking about current events</div>
+    <div class="player" data-id="1D2V8AkNqyEY1A85Ni-G5JLAfurebtQT-"></div>
+  </div>
+</section>
+
+<section id="u5">
+  <div class="sec-head">
+    <h2>第五單元：吃飯時刻</h2>
+    <div class="en">Unit 5: Time to Eat</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹 + 和朋友談論吃什麼</div>
+    <div class="t-en">Introduction + deciding what to eat with friends</div>
+    <div class="player" data-id="1HeR-ekjlRBEOfEHkZquvvOueJkUukQKu"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">預訂餐廳和餐廳用餐常用語</div>
+    <div class="t-en">Booking a restaurant and dining phrases</div>
+    <div class="player" data-id="1BUP-SVW_XL7lSOMSvf59s2yrtgjouQb_"></div>
+  </div>
+</section>
+
+<section id="u6">
+  <div class="sec-head">
+    <h2>第六單元：搭訕</h2>
+    <div class="en">Unit 6: Flirting</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="1i7EXTqBs5MKyDX24QdIZvkH3oetJl7c9"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">土味情話</div>
+    <div class="t-en">Cheesy pickup lines</div>
+    <div class="player" data-id="1DvDAxxPvywVWQo_bewjprHje7BO_62dJ"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">實用的搭訕用語</div>
+    <div class="t-en">Normal pickup lines that actually work</div>
+    <div class="player" data-id="1sgG92r0Kz9rUR_5kNXgbORImExD4se_m"></div>
+  </div>
+</section>
+
+<section id="u7">
+  <div class="sec-head">
+    <h2>第七單元：購物</h2>
+    <div class="en">Unit 7: Shopping</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="1_NNyWqKK1Y10yO87N_q-PHzwOvPJ6XCO"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">購物實用句子</div>
+    <div class="t-en">Useful sentences when shopping</div>
+    <div class="player" data-id="1Rbs_CtY4udcGQcXo8l7QUSczske_Lin8"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">名牌的正確發音</div>
+    <div class="t-en">Popular brand names, correct pronunciation</div>
+    <div class="player" data-id="1pK0HfOxce7Lt38dA-cz2v-EZkGnKaYde"></div>
+  </div>
+</section>
+
+<section id="u8">
+  <div class="sec-head">
+    <h2>第八單元：派對時刻</h2>
+    <div class="en">Unit 8: Party Time</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="19bLW8_-o5zOfm1boA1KStWQXu4I8Q3qG"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">酒吧和夜店</div>
+    <div class="t-en">Bar and nightclub vocab</div>
+    <div class="player" data-id="1CWLRPnZVSMWyeWWQDeZDab67gob98pIi"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">派對上實用的句子</div>
+    <div class="t-en">Phrases at a party</div>
+    <div class="player" data-id="1Eub6DeOp8St8lq7RRlzzkz4__3Jitium"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">酒類飲品</div>
+    <div class="t-en">Alcohol names</div>
+    <div class="player" data-id="1LraC-SV8dM81_ejirtNjwdLaoGoB3fG0"></div>
+  </div>
+</section>
+
+<section id="u9">
+  <div class="sec-head">
+    <h2>第九單元：旅遊和交通</h2>
+    <div class="en">Unit 9: Travel and Transportation</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="1sIdJzl5CCf1LA-QtVOGlUJ6l921LzVKh"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">航空旅行英文詞彙</div>
+    <div class="t-en">Airplane vocab</div>
+    <div class="player" data-id="1C8ERqSQdNh__Ib81PM6R0cFhYso0udCr"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">如何與移民官交談</div>
+    <div class="t-en">Immigration conversation</div>
+    <div class="player" data-id="1DDQc176O1r8kwjz8lvy1YHvagLrLGM78"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">酒店英語詞彙</div>
+    <div class="t-en">Hotel English vocab</div>
+    <div class="player" data-id="1ZB5KXjiDPChecB6paMUySPAmU3aaWOWH"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">酒店實用短語</div>
+    <div class="t-en">Hotels part 2, useful phrases</div>
+    <div class="player" data-id="1qLx-g4a9h0JpFdCw-0rVsBT2jDegYYbj"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">地鐵、公車、計程車常用語</div>
+    <div class="t-en">Subway, bus and taxi useful phrases</div>
+    <div class="player" data-id="1vVlfznPIwtPMOikAjvG72t_BgxJMw86_"></div>
+  </div>
+</section>
+
+<section id="u10">
+  <div class="sec-head">
+    <h2>第十單元：表達你的感受</h2>
+    <div class="en">Unit 10: Expressing your Feelings</div>
+  </div>
+  <div class="lesson">
+    <div class="t">單元介紹</div>
+    <div class="t-en">Introduction (Video 0)</div>
+    <div class="player" data-id="1yOAWEiGM-P5xlmZLHZhMiDOspsvkZ9IK"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">我又餓又渴！我需要去洗手間！我感到噁心！等</div>
+    <div class="t-en">Feelings part 1: hungry, thirsty, need the bathroom, feeling sick</div>
+    <div class="player" data-id="1OLrstYHevUQbdGjNqig7kWw61pCn5ObW"></div>
+  </div>
+  <div class="lesson">
+    <div class="t">我醉了！我累了！我睏了！我很無聊！我很興奮！等</div>
+    <div class="t-en">Feelings part 2: drunk, tired, sleepy, bored, excited</div>
+    <div class="player" data-id="1skAil_lTgOMezC7t0cIiKOfbnbAbB-NP"></div>
+  </div>
+</section>
+
+<section id="worksheets">
+  <div class="sec-head">
+    <h2>單元講義下載</h2>
+    <div class="en">Worksheets and handouts (opens in Google Drive)</div>
+  </div>
+  <div class="docs">
+
+    <div class="doc-unit">
+      <div class="u">第一單元：介紹自己<span class="en">Unit 1: Talking about yourself</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1yS96rXkyb1KT62oeM2vEFzdUnZIndxIk/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1Orp5_vvhJftWU-r3-WZiJzUlzteI7jbe/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第二單元：問候<span class="en">Unit 2: Greetings and replies</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1wamUkM1GnmDYAUMqtuEvJHR_5a-PX2XD/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1QI_XtPJLfsHy63gMkh1QflT4ROTDSrBz/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第三單元：邀請<span class="en">Unit 3: Invitations</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/16-krsMheFTWjQu5XwSdn74w_w1-jfNxM/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1UtfQkPipuQoYzUwR0vYqSiXQaK66b7Eb/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第四單元：閒聊<span class="en">Unit 4: Small Talk</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1TT0pRmORcbt_9u1teoPvfwbdnYSNV6HI/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1gk1FmWgwH8mHIaYALmKbneNPEH8INvKt/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義<span class="en">Key vocabulary and sentences handout</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第五單元：吃飯時刻<span class="en">Unit 5: Time to Eat</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1sGH0eciPtSI7wbPl0OPn6qNbVDUgDYfn/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1NLqmc7HlVeL31c6snGvtQLAA_21YxtYi/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第六單元：搭訕<span class="en">Unit 6: Flirting</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1yBtEldglmIdV-Qv83jhCnOcRthh133N-/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1GWEWgjm-pgpbsyJDqrfRrYWN3L2cTq9N/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第七單元：購物<span class="en">Unit 7: Shopping</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1LJFDhPvC6s-4lB0B4k8XYQDy2dG2zDrh/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1-bBB825wFQ2CDolwD1-dy7-fNklGu6a0/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第八單元：派對時刻<span class="en">Unit 8: Party Time</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1qJFOC2XWS8XTedMO2KP4nwnjEWkS65j6/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1hggXRrRCbYdOwqbD0eVYCDMVZQnrVtd5/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第九單元：旅遊和交通<span class="en">Unit 9: Travel and Transportation</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1HUIudUDOk-rekaEpnuw8ftyD7XDQVvzO/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1KCctkf61ptScCZg2qQjxGaKyZj8brYTP/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+    <div class="doc-unit">
+      <div class="u">第十單元：表達你的感受<span class="en">Unit 10: Expressing your Feelings</span></div>
+      <a class="doc" href="https://drive.google.com/file/d/1Zh48yBALmRWfKnfQiRz18ZmS5pyDZa1t/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>單元講義<span class="en">Unit handout</span></span></a>
+      <a class="doc" href="https://drive.google.com/file/d/1FtCqSVhwiB2pEULJyu5ltPB_PPxmKXqN/view" target="_blank" rel="noopener"><span class="ico">&#9656;</span><span>重點單字句型講義（含作業）<span class="en">Key vocabulary and sentences handout with homework</span></span></a>
+    </div>
+
+  </div>
+</section>
+
+<div class="foot">© Teacher Gary · jiangeducation.com</div>
+
+</div>
+
+<script>
+(function(){
+  var players = document.querySelectorAll('.player');
+  players.forEach(function(p){
+    var id = p.getAttribute('data-id');
+    var img = document.createElement('img');
+    img.className = 'thumb';
+    img.loading = 'lazy';
+    img.alt = '';
+    img.src = 'https://drive.google.com/thumbnail?id=' + id + '&sz=w800';
+    img.onerror = function(){ this.style.display = 'none'; };
+    var play = document.createElement('div');
+    play.className = 'play';
+    play.innerHTML = '<div class="btn"><svg width="22" height="26" viewBox="0 0 22 26" fill="#191203"><path d="M0 0 L22 13 L0 26 Z"/></svg></div><div class="hint">點擊播放 · Tap to play</div>';
+    p.appendChild(img);
+    p.appendChild(play);
+    p.addEventListener('click', function(){
+      if (p.querySelector('iframe')) return;
+      var f = document.createElement('iframe');
+      f.src = 'https://drive.google.com/file/d/' + id + '/preview';
+      f.loading = 'lazy';
+      f.allow = 'autoplay';
+      f.allowFullscreen = true;
+      p.innerHTML = '';
+      p.appendChild(f);
+      p.style.cursor = 'default';
+    });
+  });
+})();
+</script>
+</body>
+</html>
