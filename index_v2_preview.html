@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teacher Gary</title>
+<meta name="description" content="Teacher Gary — 幫華人專業人士在重要場合，用英文把自己說清楚。">
+<style>
+:root{
+  --bg:#0a0c11; --ink:#f1f4f8; --mut:#98a2b0; --faint:#5b6573;
+  --card:#13171f; --card2:#171c26; --line:#222936;
+  --gold:#ffce5c; --gold-deep:#caa033; --grn:#39d98a;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:
+    radial-gradient(820px 420px at 50% -8%, rgba(255,206,92,.10), transparent 60%),
+    radial-gradient(1100px 620px at 50% 0%, #182032, #0a0c11 62%);
+  color:var(--ink);
+  font:17px/1.55 -apple-system,BlinkMacSystemFont,"PingFang TC","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  min-height:100vh; display:flex; justify-content:center;
+  padding:54px 20px 64px; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:468px;width:100%;text-align:center}
+
+/* header */
+.av{position:relative;width:106px;height:106px;margin:0 auto 16px;border-radius:50%;
+  background:linear-gradient(150deg,#222b3b,#11151d);
+  box-shadow:0 0 0 2px var(--gold), 0 0 0 7px rgba(255,206,92,.10), 0 16px 40px rgba(0,0,0,.5);}
+.av img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover}
+.av .mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font:700 46px/1 "PingFang TC",Georgia,serif;
+  background:linear-gradient(180deg,var(--gold),var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:25px;margin:0;letter-spacing:.2px;font-weight:800}
+.rule{width:34px;height:3px;border-radius:3px;margin:11px auto 13px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-deep))}
+.tag{color:#c7cfdb;font-size:14.5px;margin:0 auto;max-width:330px;line-height:1.5}
+.tag-en{color:var(--faint);font-size:12.5px;margin:6px auto 0;max-width:330px;letter-spacing:.2px}
+
+/* section label */
+.sect{display:flex;align-items:center;gap:10px;color:var(--faint);
+  font-size:11px;letter-spacing:1.6px;text-transform:uppercase;margin:30px 2px 13px}
+.sect::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+
+/* link cards */
+a.lnk{position:relative;display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);
+  background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 16px;margin:0 0 12px;
+  text-align:left;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+a.lnk:hover{transform:translateY(-2px);border-color:#39455a;box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.chip{flex:0 0 44px;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  background:#1c2330;color:#cdd6e2;border:1px solid #283143}
+.chip svg{width:23px;height:23px}
+.tx{flex:1;min-width:0}
+.tx .t{display:block;font-weight:750;font-size:15.5px;letter-spacing:.2px}
+.tx .sub{display:block;color:var(--mut);font-weight:500;font-size:12px;margin-top:2px;line-height:1.4}
+.arrow{flex:0 0 auto;color:var(--faint);font-size:17px;transition:transform .16s ease}
+a.lnk:hover .arrow{transform:translateX(3px);color:var(--mut)}
+
+/* accents */
+a.hero{background:linear-gradient(135deg,#2b2611,#191713);border-color:#5c4d20}
+a.hero .chip{background:rgba(255,206,92,.13);color:var(--gold);border-color:rgba(255,206,92,.35)}
+a.hero:hover{border-color:var(--gold)}
+a.apply{background:linear-gradient(135deg,#102621,#141d1a);border-color:#1f5d42}
+a.apply .chip{background:rgba(57,217,138,.13);color:var(--grn);border-color:rgba(57,217,138,.35)}
+a.apply:hover{border-color:var(--grn)}
+.badge{margin-left:8px;font-size:10px;font-weight:700;letter-spacing:.5px;color:#0a0c11;
+  background:var(--grn);padding:2px 7px;border-radius:999px;vertical-align:middle}
+
+.foot{color:var(--faint);font-size:11.5px;margin-top:30px;line-height:1.7}
+.foot a{color:var(--faint);text-decoration:none}
+</style></head>
+<body><div class="wrap">
+
+  <div class="av"><img src="./avatar.jpg" alt="Teacher Gary" onerror="this.remove()"><span class="mono">G</span></div>
+  <h1>Teacher Gary</h1>
+  <div class="rule"></div>
+  <div class="tag">幫華人專業人士在重要場合，用英文把自己說清楚</div>
+  <div class="tag-en">Helping Chinese-speaking professionals express themselves in English when it counts</div>
+
+  <div class="sect">開始 · Start here</div>
+
+  <a class="lnk hero" href="./ebook.html">
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8"/><path d="M12 8v13"/><path d="M12 8S10.5 3 8 3a2.5 2.5 0 0 0 0 5h4"/><path d="M12 8s1.5-5 4-5a2.5 2.5 0 0 1 0 5h-4"/></svg></span>
+    <span class="tx"><span class="t">免費電子書：全球企業英文面試指南</span><span class="sub">Free ebook · The Global Business English Interview Guide</span></span>
+    <span class="arrow">→</span>
+  </a>
+
+  <a class="lnk apply" href="https://ig.me/m/teachergary69" target="_blank" rel="noopener">
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg></span>
+    <span class="tx"><span class="t">一對一英文表達訓練 · 申請<span class="badge">名額有限</span></span><span class="sub">1:1 · 面試 · 留學申請 · 職場溝通 · 自我介紹</span></span>
+    <span class="arrow">→</span>
+  </a>
+
+  <a class="lnk" href="https://ig.me/m/teachergary69" target="_blank" rel="noopener">
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></span>
+    <span class="tx"><span class="t">英文面試影片課程</span><span class="sub">Interview-English video course · 私訊了解</span></span>
+    <span class="arrow">→</span>
+  </a>
+
+  <div class="sect">內容 · Watch</div>
+
+  <a class="lnk" href="https://www.instagram.com/teachergary69" target="_blank" rel="noopener">
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+    <span class="tx"><span class="t">Instagram</span><span class="sub">每日內容</span></span>
+    <span class="arrow">→</span>
+  </a>
+  <a class="lnk" href="https://www.youtube.com/@TeacherGary" target="_blank" rel="noopener">
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="6" width="19" height="12" rx="3.6" stroke="currentColor" stroke-width="1.8"/><path d="M10.4 9.1l4.4 2.9-4.4 2.9z" fill="currentColor"/></svg></span>
+    <span class="tx"><span class="t">YouTube</span><span class="sub">看最新影片</span></span>
+    <span class="arrow">→</span>
+  </a>
+
+  <div class="foot">© Teacher Gary<br>商務合作 · <a href="mailto:gjiang.hba2014@ivey.ca">gjiang.hba2014@ivey.ca</a></div>
+
+</div></body></html>
