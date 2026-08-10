@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en"><head>
+<meta name="robots" content="noindex,nofollow,noarchive"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>The listening test is not a listening test · Language View</title>
+<style>
+:root{--bg:#faf7f0;--paper:#fffdf8;--ink:#23201b;--soft:#5b554c;--line:#e6ddcb;--accent:#9a5b1e;--rule:#d8cdb6;--kara:#ffe08a;--sent:#fff6df;--read-fs:18px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.72 Georgia,"Iowan Old Style",serif}
+.bar{position:sticky;top:0;z-index:40;background:rgba(250,247,240,.96);backdrop-filter:blur(7px);border-bottom:1px solid var(--line);
+  font:13px/1.3 -apple-system,"PingFang SC",sans-serif;padding:9px 14px;display:flex;gap:8px 14px;align-items:center;flex-wrap:wrap;justify-content:center}
+.bar a{color:var(--accent);text-decoration:none;margin-right:6px}
+.bar label{display:inline-flex;align-items:center;gap:5px;cursor:pointer;padding:4px 10px;border:1px solid var(--line);border-radius:16px;user-select:none;white-space:nowrap}
+.bar label.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.bar input{display:none}
+.bar .order{cursor:pointer;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:16px;padding:4px 12px;font-weight:600}
+.bar .vsw{font-size:11px;color:var(--soft)}.bar .vsw a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:26px 24px 120px}
+h1{font-size:30px;line-height:1.2;margin:14px 0 6px}
+.dek{font:14px/1.55 -apple-system,"PingFang SC",sans-serif;color:var(--soft);margin:0 0 22px;border-bottom:1px solid var(--rule);padding-bottom:18px}
+.lv-sec{border-top:1px solid var(--rule);padding:20px 0 6px;display:flex;flex-direction:column}
+.lv-sec:first-of-type{border-top:none}
+.lv-h{font-size:22px;line-height:1.3;margin:0 0 12px;order:0}
+.lv-subt{display:block;font-size:16px;color:var(--soft);font-family:"Songti SC","PingFang SC",serif;margin-top:3px}
+.lv-group{margin:6px 0}.lv-en{order:1}.lv-zh{order:2}
+body.zh-first .lv-en{order:2}body.zh-first .lv-zh{order:1}
+.lv-notes{order:3}
+.lv-figs{order:0;display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 12px}
+.lv-figs figure{margin:0;max-width:230px}.lv-figs img{max-width:230px;max-height:420px;width:auto;border-radius:10px;border:1px solid var(--line)}
+.lv-figs figcaption{font:12px/1.4 -apple-system,"PingFang SC",sans-serif;color:var(--soft);margin-top:4px}
+.lv-text{margin:4px 0;font-size:var(--read-fs)}
+.lv-zh .lv-text{font-family:"Songti SC","Source Han Serif SC",Georgia,"PingFang SC",serif;line-height:2.05;color:#332f28;font-size:calc(var(--read-fs) + 1px)}
+.lv-au{font:12px/1 -apple-system,sans-serif;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:16px;
+  padding:5px 12px;margin:2px 0 6px;cursor:pointer;white-space:nowrap}
+.lv-au:hover,.lv-au.on{background:var(--accent);color:#fff}
+.w{border-radius:3px;transition:background .04s linear;cursor:pointer}
+.w:hover{background:#f1e7cf}
+.w.kara-sent{background:var(--sent)}
+.w.kara{background:var(--kara);box-shadow:0 0 0 1px #f0c54e}
+.lv-notes .nlp{font:13px/1.55 -apple-system,"PingFang SC",sans-serif;background:#f3ece0;border:1px solid var(--line);border-radius:9px;padding:9px 13px;margin:9px 0;color:#4a4339}
+.lv-notes .nlp b{color:var(--accent)} .lv-notes .cite{font:11px ui-monospace,Menlo,monospace;color:var(--accent)}
+.lv-notes .nlp .zh{display:block;border-left:2px solid #d8cdb6;padding-left:11px;margin-top:6px;font-family:"PingFang SC",sans-serif}
+.lv-notes .flag{font:13px/1.55 -apple-system,"PingFang SC",sans-serif;background:#fbeede;border-left:4px solid #c98a2e;border-radius:9px;padding:9px 13px;margin:9px 0;color:#5a4426}
+.lv-notes .flag .zh{display:block;border-left:2px solid #e0c08a;padding-left:11px;margin-top:6px;font-family:"PingFang SC",sans-serif}
+body.hide-en-text .lv-en-text{display:none}
+body.hide-en-audio .lv-en-audio{display:none}
+body.hide-zh-text .lv-zh-text{display:none}
+body.hide-zh-audio .lv-zh-audio{display:none}
+body.hide-en-text.hide-en-audio .lv-en{display:none}
+body.hide-zh-text.hide-zh-audio .lv-zh{display:none}
+#tp{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(28,25,21,.97);color:#fff;
+  font:13px/1 -apple-system,"PingFang SC",sans-serif;padding:9px 16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;box-shadow:0 -4px 20px rgba(0,0,0,.35)}
+#tp button{background:#ffce5c;color:#23201b;border:none;border-radius:18px;padding:8px 15px;font-weight:700;cursor:pointer}
+#tp .fs{display:flex;gap:6px}#tp .fs button{padding:8px 11px;font-size:13px;background:#3a352d;color:#ffce5c}
+#tp #st{opacity:.85;font-size:12px;min-width:120px}
+#tp .sp{display:flex;align-items:center;gap:7px}
+#tp input[type=range]{width:104px;accent-color:#ffce5c;cursor:pointer}#spv{color:#ffce5c;font-weight:700;min-width:30px}
+#tp #seek{flex:1 1 200px;min-width:130px;width:auto;height:20px}#tp #tm{font-size:12px;opacity:.85;min-width:84px;font-variant-numeric:tabular-nums}
+.bar,.lv-au,#tp button{touch-action:manipulation}
+@media(max-width:540px){
+  .wrap{padding:16px 14px 132px}
+  h1{font-size:25px}
+  .dek{font-size:13px}
+  .bar{padding:8px 10px;gap:6px 8px}
+  .bar label{padding:6px 12px;font-size:13px}
+  .bar .order{padding:6px 13px}
+  .bar .vsw{flex-basis:100%;text-align:center;margin-top:2px}
+  .lv-h{font-size:20px}
+  .lv-zh .lv-text{line-height:2.1}
+  .lv-au{padding:8px 14px;font-size:13px}
+  #tp{padding:10px 12px calc(11px + env(safe-area-inset-bottom));gap:10px}
+  #tp button{padding:11px 17px}
+  #tp #st{min-width:0;flex:1 1 100%;text-align:center;order:3}
+  #tp input[type=range]{width:120px}
+}
+</style></head>
+<body class="">
+<div class="bar">
+  <a href="file:///Users/gary/TGP/nlp-reports/index.html">← Reports</a>
+  <label data-cls="hide-en-text"  class="on"><input type="checkbox" checked>EN text</label>
+  <label data-cls="hide-en-audio" class="on"><input type="checkbox" checked>EN audio</label>
+  <label data-cls="hide-zh-text"  class="on"><input type="checkbox" checked>中文 text</label>
+  <label data-cls="hide-zh-audio" class="on"><input type="checkbox" checked>中文 audio</label>
+  <button class="order" id="ord">English first ⇅</button>
+  <button class="order" id="sct">简 / 繁</button>
+  <label id="aslbl" class="on"><input type="checkbox" id="ascb" checked>Auto-scroll</label>
+  <span class="vsw">v2 · Language View</span>
+</div>
+<div class="wrap">
+<h1>The listening test is not a listening test</h1>
+<p class="dek">Language View (v2) · karaoke follow-along: the spoken word lights up and the matching sentence is highlighted in both languages, so you can read the meaning as you listen. Toggle blocks, swap order, set speed. Hotkeys: k = next language switch, j = back, space = play/pause.</p>
+
+<section class="lv-sec" data-key="thesis">
+  <h2 class="lv-h"><span class="lv-en-text">What Gary noticed</span><span class="lv-zh-text lv-subt" data-simp="Gary 注意到的事" data-trad="Gary 注意到的事">Gary 注意到的事</span></h2>
+  
+  <div class="lv-group lv-en">
+    <button class="lv-au lv-en-audio" data-key="thesis" data-lang="en">▶ EN</button>
+    <div class="lv-text lv-en-text" id="txt-thesis-en"><span id="w-thesis-en-0" class="w" data-s="0">Gary has three episodes now.</span> <span id="w-thesis-en-1" class="w" data-s="1">The third one argues that you do not have to suffer to succeed.</span> <span id="w-thesis-en-2" class="w" data-s="2">There are people who believe you must grind, must go through battles, must earn it through pain.</span> <span id="w-thesis-en-3" class="w" data-s="3">He disagrees, and the episode ends by saying that is his position.</span> <span id="w-thesis-en-4" class="w" data-s="4">What he noticed while making it is that this series lets him talk about the things he actually cares about.</span> <span id="w-thesis-en-5" class="w" data-s="5">Buddhism.</span> <span id="w-thesis-en-6" class="w" data-s="6">Reincarnation.</span> <span id="w-thesis-en-7" class="w" data-s="7">Abraham Hicks.</span> <span id="w-thesis-en-8" class="w" data-s="8">Manifestation, eventually, if he wants it.</span> <span id="w-thesis-en-9" class="w" data-s="9">He can also go the traditional route and talk about specifically Asian things, like whether an adult should still live at home.</span> <span id="w-thesis-en-10" class="w" data-s="10">The range is enormous, and none of it breaks the format.</span></div>
+  </div>
+  <div class="lv-group lv-zh">
+    <button class="lv-au lv-zh-audio" data-key="thesis" data-lang="zh">▶</button>
+    <div class="lv-text lv-zh-text" id="txt-thesis-zh"><span id="w-thesis-zh-0" class="w" data-s="0" data-simp="现在已经有三集了。" data-trad="現在已經有三集了。">现在已经有三集了。</span><span id="w-thesis-zh-1" class="w" data-s="1" data-simp="第三集在讲一个观点：成功不一定要靠吃苦。" data-trad="第三集在講一個觀點：成功不一定要靠喫苦。">第三集在讲一个观点：成功不一定要靠吃苦。</span><span id="w-thesis-zh-2" class="w" data-s="2" data-simp="有些人相信你必须拼命，必须经历战斗，必须用痛苦换来结果。" data-trad="有些人相信你必須拼命，必須經歷戰鬥，必須用痛苦換來結果。">有些人相信你必须拼命，必须经历战斗，必须用痛苦换来结果。</span><span id="w-thesis-zh-3" class="w" data-s="3" data-simp="他不同意，而那一集的结尾就是在说，这就是他的立场。" data-trad="他不同意，而那一集的結尾就是在說，這就是他的立場。">他不同意，而那一集的结尾就是在说，这就是他的立场。</span><span id="w-thesis-zh-4" class="w" data-s="4" data-simp="他在做这一集的时候发现，这个系列让他可以聊他真正在乎的东西。" data-trad="他在做這一集的時候發現，這個系列讓他可以聊他真正在乎的東西。">他在做这一集的时候发现，这个系列让他可以聊他真正在乎的东西。</span><span id="w-thesis-zh-5" class="w" data-s="5" data-simp="佛教。" data-trad="佛教。">佛教。</span><span id="w-thesis-zh-6" class="w" data-s="6" data-simp="轮回。" data-trad="輪迴。">轮回。</span><span id="w-thesis-zh-7" class="w" data-s="7" data-simp="Abraham Hicks 的教导。" data-trad="Abraham Hicks 的教導。">Abraham Hicks 的教导。</span><span id="w-thesis-zh-8" class="w" data-s="8" data-simp="如果他想，以后甚至可以直接聊显化。" data-trad="如果他想，以後甚至可以直接聊顯化。">如果他想，以后甚至可以直接聊显化。</span><span id="w-thesis-zh-9" class="w" data-s="9" data-simp="他也可以走比较传统的路线，聊那些很亚洲的题目，比如成年人该不该还住在家里。" data-trad="他也可以走比較傳統的路線，聊那些很亞洲的題目，比如成年人該不該還住在家裏。">他也可以走比较传统的路线，聊那些很亚洲的题目，比如成年人该不该还住在家里。</span><span id="w-thesis-zh-10" class="w" data-s="10" data-simp="可以涵盖的范围非常大，而且这些都不会破坏这个格式。" data-trad="可以涵蓋的範圍非常大，而且這些都不會破壞這個格式。">可以涵盖的范围非常大，而且这些都不会破坏这个格式。</span></div>
+  </div>
+  <div class="lv-notes"></div>
+</section>
+
+<section class="lv-sec" data-key="open">
+  <h2 class="lv-h"><span class="lv-en-text">Why this format is different from everything else he makes</span><span class="lv-zh-text lv-subt" data-simp="为什么这个格式跟他做的其他东西都不一样" data-trad="爲什麼這個格式跟他做的其他東西都不一樣">为什么这个格式跟他做的其他东西都不一样</span></h2>
+  
+  <div class="lv-group lv-en">
+    <button class="lv-au lv-en-audio" data-key="open" data-lang="en">▶ EN</button>
+    <div class="lv-text lv-en-text" id="txt-open-en"><span id="w-open-en-0" class="w" data-s="0">Almost every other format Gary runs is closed.</span> <span id="w-open-en-1" class="w" data-s="1">A vocabulary word card teaches one word, ends, and the ceiling on it is whether you learned the word.</span> <span id="w-open-en-2" class="w" data-s="2">The whiteboard series explains a difference between two terms and then it is over.</span> <span id="w-open-en-3" class="w" data-s="3">Those formats are complete in themselves, which is exactly why they cannot carry anything else.</span> <span id="w-open-en-4" class="w" data-s="4">The listening test is open.</span> <span id="w-open-en-5" class="w" data-s="5">The passage content is a free variable.</span> <span id="w-open-en-6" class="w" data-s="6">The thing that holds attention is the meter climbing and the score at the end, and that mechanic does not care what the passage is about.</span> <span id="w-open-en-7" class="w" data-s="7">So he can put any idea he has inside it and the retention still works.</span> <span id="w-open-en-8" class="w" data-s="8">That is not a small difference.</span> <span id="w-open-en-9" class="w" data-s="9">It is the difference between a format that produces videos and a format that can carry a body of thought.</span></div>
+  </div>
+  <div class="lv-group lv-zh">
+    <button class="lv-au lv-zh-audio" data-key="open" data-lang="zh">▶</button>
+    <div class="lv-text lv-zh-text" id="txt-open-zh"><span id="w-open-zh-0" class="w" data-s="0" data-simp="他做的其他格式几乎都是封闭的。" data-trad="他做的其他格式幾乎都是封閉的。">他做的其他格式几乎都是封闭的。</span><span id="w-open-zh-1" class="w" data-s="1" data-simp="单词卡教一个单词，讲完就结束了，天花板就是你有没有学会那个词。" data-trad="單詞卡教一個單詞，講完就結束了，天花板就是你有沒有學會那個詞。">单词卡教一个单词，讲完就结束了，天花板就是你有没有学会那个词。</span><span id="w-open-zh-2" class="w" data-s="2" data-simp="白板系列解释两个词的差别，然后就没了。" data-trad="白板系列解釋兩個詞的差別，然後就沒了。">白板系列解释两个词的差别，然后就没了。</span><span id="w-open-zh-3" class="w" data-s="3" data-simp="这些格式本身就是完整的，也正因为完整，它们没办法承载别的东西。" data-trad="這些格式本身就是完整的，也正因爲完整，它們沒辦法承載別的東西。">这些格式本身就是完整的，也正因为完整，它们没办法承载别的东西。</span><span id="w-open-zh-4" class="w" data-s="4" data-simp="听力测验是开放的。" data-trad="聽力測驗是開放的。">听力测验是开放的。</span><span id="w-open-zh-5" class="w" data-s="5" data-simp="段落的内容是一个自由变量。" data-trad="段落的內容是一個自由變量。">段落的内容是一个自由变量。</span><span id="w-open-zh-6" class="w" data-s="6" data-simp="真正留住注意力的，是那根往上爬的刻度和最后的分数，而这个机制根本不在乎段落在讲什么。" data-trad="真正留住注意力的，是那根往上爬的刻度和最後的分數，而這個機制根本不在乎段落在講什麼。">真正留住注意力的，是那根往上爬的刻度和最后的分数，而这个机制根本不在乎段落在讲什么。</span><span id="w-open-zh-7" class="w" data-s="7" data-simp="所以他可以把任何想法放进去，留存率照样成立。" data-trad="所以他可以把任何想法放進去，留存率照樣成立。">所以他可以把任何想法放进去，留存率照样成立。</span><span id="w-open-zh-8" class="w" data-s="8" data-simp="这个差别不小。" data-trad="這個差別不小。">这个差别不小。</span><span id="w-open-zh-9" class="w" data-s="9" data-simp="这是「一个能产出影片的格式」跟「一个能承载一整套思想的格式」之间的差别。" data-trad="這是「一個能產出影片的格式」跟「一個能承載一整套思想的格式」之間的差別。">这是「一个能产出影片的格式」跟「一个能承载一整套思想的格式」之间的差别。</span></div>
+  </div>
+  <div class="lv-notes"></div>
+</section>
+
+<section class="lv-sec" data-key="filter">
+  <h2 class="lv-h"><span class="lv-en-text">Recruit broadly, then filter for the tribe</span><span class="lv-zh-text lv-subt" data-simp="先广招人，再筛出同类" data-trad="先廣招人，再篩出同類">先广招人，再筛出同类</span></h2>
+  
+  <div class="lv-group lv-en">
+    <button class="lv-au lv-en-audio" data-key="filter" data-lang="en">▶ EN</button>
+    <div class="lv-text lv-en-text" id="txt-filter-en"><span id="w-filter-en-0" class="w" data-s="0">Gary described an intersection: people who want to improve their English, people who respect the IELTS test, and people who like his ideas.</span> <span id="w-filter-en-1" class="w" data-s="1">The order matters more than the overlap.</span> <span id="w-filter-en-2" class="w" data-s="2">The format recruits broadly, because English learners are an enormous group and a self-scoring test is irresistible to them.</span> <span id="w-filter-en-3" class="w" data-s="3">Then the content quietly filters.</span> <span id="w-filter-en-4" class="w" data-s="4">Someone who only wanted listening practice gets listening practice and leaves satisfied.</span> <span id="w-filter-en-5" class="w" data-s="5">Someone who hears an argument about suffering and success and thinks yes, exactly, that person is no longer an audience member.</span> <span id="w-filter-en-6" class="w" data-s="6">They are a follower.</span> <span id="w-filter-en-7" class="w" data-s="7">His word card videos recruit broadly and filter for nothing.</span> <span id="w-filter-en-8" class="w" data-s="8">Everybody who watches one gets the same thing out of it.</span> <span id="w-filter-en-9" class="w" data-s="9">That is why a hundred of them do not compound into anything.</span> <span id="w-filter-en-10" class="w" data-s="10">This format compounds, because every episode sorts the room a little further.</span></div>
+  </div>
+  <div class="lv-group lv-zh">
+    <button class="lv-au lv-zh-audio" data-key="filter" data-lang="zh">▶</button>
+    <div class="lv-text lv-zh-text" id="txt-filter-zh"><span id="w-filter-zh-0" class="w" data-s="0" data-simp="Gary 描述了一个交集：想提升英文的人、尊重雅思这个考试的人、还有喜欢他的想法的人。" data-trad="Gary 描述了一個交集：想提升英文的人、尊重雅思這個考試的人、還有喜歡他的想法的人。">Gary 描述了一个交集：想提升英文的人、尊重雅思这个考试的人、还有喜欢他的想法的人。</span><span id="w-filter-zh-1" class="w" data-s="1" data-simp="这里顺序比交集本身更重要。" data-trad="這裏順序比交集本身更重要。">这里顺序比交集本身更重要。</span><span id="w-filter-zh-2" class="w" data-s="2" data-simp="这个格式先广招人，因为学英文的人基数巨大，而一个可以自己打分的测验对他们来说几乎无法抗拒。" data-trad="這個格式先廣招人，因爲學英文的人基數巨大，而一個可以自己打分的測驗對他們來說幾乎無法抗拒。">这个格式先广招人，因为学英文的人基数巨大，而一个可以自己打分的测验对他们来说几乎无法抗拒。</span><span id="w-filter-zh-3" class="w" data-s="3" data-simp="然后内容会安静地做筛选。" data-trad="然後內容會安靜地做篩選。">然后内容会安静地做筛选。</span><span id="w-filter-zh-4" class="w" data-s="4" data-simp="只是想练听力的人，练到了听力，满意地离开。" data-trad="只是想練聽力的人，練到了聽力，滿意地離開。">只是想练听力的人，练到了听力，满意地离开。</span><span id="w-filter-zh-5" class="w" data-s="5" data-simp="而听到「吃苦与成功」这段论述、心里想著对，就是这样的那个人，他就不再只是观众了。" data-trad="而聽到「喫苦與成功」這段論述、心裏想著對，就是這樣的那個人，他就不再只是觀衆了。">而听到「吃苦与成功」这段论述、心里想著对，就是这样的那个人，他就不再只是观众了。</span><span id="w-filter-zh-6" class="w" data-s="6" data-simp="他变成了追随者。" data-trad="他變成了追隨者。">他变成了追随者。</span><span id="w-filter-zh-7" class="w" data-s="7" data-simp="他的单词卡影片是广招人，但不筛选。" data-trad="他的單詞卡影片是廣招人，但不篩選。">他的单词卡影片是广招人，但不筛选。</span><span id="w-filter-zh-8" class="w" data-s="8" data-simp="每个看的人拿到的东西都一样。" data-trad="每個看的人拿到的東西都一樣。">每个看的人拿到的东西都一样。</span><span id="w-filter-zh-9" class="w" data-s="9" data-simp="这就是为什么做一百支也不会累积成什么。" data-trad="這就是爲什麼做一百支也不會累積成什麼。">这就是为什么做一百支也不会累积成什么。</span><span id="w-filter-zh-10" class="w" data-s="10" data-simp="这个格式会累积，因为每一集都在把房间里的人再分一次类。" data-trad="這個格式會累積，因爲每一集都在把房間裏的人再分一次類。">这个格式会累积，因为每一集都在把房间里的人再分一次类。</span></div>
+  </div>
+  <div class="lv-notes"></div>
+</section>
+
+<section class="lv-sec" data-key="attention">
+  <h2 class="lv-h"><span class="lv-en-text">The missing subtitles are doing something he did not plan</span><span class="lv-zh-text lv-subt" data-simp="没有字幕这件事，正在做他没预料到的事" data-trad="沒有字幕這件事，正在做他沒預料到的事">没有字幕这件事，正在做他没预料到的事</span></h2>
+  
+  <div class="lv-group lv-en">
+    <button class="lv-au lv-en-audio" data-key="attention" data-lang="en">▶ EN</button>
+    <div class="lv-text lv-en-text" id="txt-attention-en"><span id="w-attention-en-0" class="w" data-s="0">Because there are no subtitles during the passage, the viewer cannot skim.</span> <span id="w-attention-en-1" class="w" data-s="1">In a normal talking head video the captions let people read at their own speed, half watching, already scrolling.</span> <span id="w-attention-en-2" class="w" data-s="2">Here they have to actually listen, sentence by sentence, or they lose their place on the meter.</span> <span id="w-attention-en-3" class="w" data-s="3">That means his ideas land harder in this format than in a video where he simply states them.</span> <span id="w-attention-en-4" class="w" data-s="4">He built a mechanism that forces genuine attention on his beliefs, and he built it for a completely different reason.</span> <span id="w-attention-en-5" class="w" data-s="5">That is the part worth protecting.</span></div>
+  </div>
+  <div class="lv-group lv-zh">
+    <button class="lv-au lv-zh-audio" data-key="attention" data-lang="zh">▶</button>
+    <div class="lv-text lv-zh-text" id="txt-attention-zh"><span id="w-attention-zh-0" class="w" data-s="0" data-simp="因为段落播放时没有字幕，观众没办法略读。" data-trad="因爲段落播放時沒有字幕，觀衆沒辦法略讀。">因为段落播放时没有字幕，观众没办法略读。</span><span id="w-attention-zh-1" class="w" data-s="1" data-simp="在一般的口播影片里，字幕让人可以用自己的速度扫过去，一边看一边已经在滑下一支了。" data-trad="在一般的口播影片裏，字幕讓人可以用自己的速度掃過去，一邊看一邊已經在滑下一支了。">在一般的口播影片里，字幕让人可以用自己的速度扫过去，一边看一边已经在滑下一支了。</span><span id="w-attention-zh-2" class="w" data-s="2" data-simp="但在这里，他们必须真的在听，一句一句地听，否则就跟丢了刻度的位置。" data-trad="但在這裏，他們必須真的在聽，一句一句地聽，否則就跟丟了刻度的位置。">但在这里，他们必须真的在听，一句一句地听，否则就跟丢了刻度的位置。</span><span id="w-attention-zh-3" class="w" data-s="3" data-simp="这代表他的想法在这个格式里，比他直接讲出来还要更有力。" data-trad="這代表他的想法在這個格式裏，比他直接講出來還要更有力。">这代表他的想法在这个格式里，比他直接讲出来还要更有力。</span><span id="w-attention-zh-4" class="w" data-s="4" data-simp="他做出了一个逼人真正专注在他信念上的机制，而当初做它的理由完全不是这个。" data-trad="他做出了一個逼人真正專注在他信念上的機制，而當初做它的理由完全不是這個。">他做出了一个逼人真正专注在他信念上的机制，而当初做它的理由完全不是这个。</span><span id="w-attention-zh-5" class="w" data-s="5" data-simp="这一点最值得保护。" data-trad="這一點最值得保護。">这一点最值得保护。</span></div>
+  </div>
+  <div class="lv-notes"></div>
+</section>
+
+<section class="lv-sec" data-key="scale">
+  <h2 class="lv-h"><span class="lv-en-text">Why it really is scalable</span><span class="lv-zh-text lv-subt" data-simp="为什么它真的可以规模化" data-trad="爲什麼它真的可以規模化">为什么它真的可以规模化</span></h2>
+  
+  <div class="lv-group lv-en">
+    <button class="lv-au lv-en-audio" data-key="scale" data-lang="en">▶ EN</button>
+    <div class="lv-text lv-en-text" id="txt-scale-en"><span id="w-scale-en-0" class="w" data-s="0">Gary is right that he can film it anywhere.</span> <span id="w-scale-en-1" class="w" data-s="1">There is a specific reason, and it is worth naming.</span> <span id="w-scale-en-2" class="w" data-s="2">The meter is a graphic overlay, not a set.</span> <span id="w-scale-en-3" class="w" data-s="3">Every other format he runs depends on the room.</span> <span id="w-scale-en-4" class="w" data-s="4">The whiteboard series needs the whiteboard.</span> <span id="w-scale-en-5" class="w" data-s="5">The word cards need the framing and the lighting.</span> <span id="w-scale-en-6" class="w" data-s="6">This one needs a face and clean audio, and that is all.</span> <span id="w-scale-en-7" class="w" data-s="7">Thailand, a hotel room, outdoors, a car, all fine.</span> <span id="w-scale-en-8" class="w" data-s="8">There is a bonus hiding in that.</span> <span id="w-scale-en-9" class="w" data-s="9">The sharpest criticism episode one received was that the audio was too clean, too slow, too quiet, with no accent and no background noise.</span> <span id="w-scale-en-10" class="w" data-s="10">Filming somewhere real solves the scalability question and the difficulty question at the same time.</span> <span id="w-scale-en-11" class="w" data-s="11">A passage recorded in a noisy street is both easier to make and harder to understand.</span></div>
+  </div>
+  <div class="lv-group lv-zh">
+    <button class="lv-au lv-zh-audio" data-key="scale" data-lang="zh">▶</button>
+    <div class="lv-text lv-zh-text" id="txt-scale-zh"><span id="w-scale-zh-0" class="w" data-s="0" data-simp="Gary 说他在哪里都能拍，这是对的。" data-trad="Gary 說他在哪裏都能拍，這是對的。">Gary 说他在哪里都能拍，这是对的。</span><span id="w-scale-zh-1" class="w" data-s="1" data-simp="而且有一个很具体的原因值得讲清楚。" data-trad="而且有一個很具體的原因值得講清楚。">而且有一个很具体的原因值得讲清楚。</span><span id="w-scale-zh-2" class="w" data-s="2" data-simp="那根刻度是一个图层，不是一个场景。" data-trad="那根刻度是一個圖層，不是一個場景。">那根刻度是一个图层，不是一个场景。</span><span id="w-scale-zh-3" class="w" data-s="3" data-simp="他其他每一个格式都依赖那个房间。" data-trad="他其他每一個格式都依賴那個房間。">他其他每一个格式都依赖那个房间。</span><span id="w-scale-zh-4" class="w" data-s="4" data-simp="白板系列需要白板。" data-trad="白板系列需要白板。">白板系列需要白板。</span><span id="w-scale-zh-5" class="w" data-s="5" data-simp="单词卡需要那个构图和灯光。" data-trad="單詞卡需要那個構圖和燈光。">单词卡需要那个构图和灯光。</span><span id="w-scale-zh-6" class="w" data-s="6" data-simp="这一个只需要一张脸和干净的声音，就这样而已。" data-trad="這一個只需要一張臉和乾淨的聲音，就這樣而已。">这一个只需要一张脸和干净的声音，就这样而已。</span><span id="w-scale-zh-7" class="w" data-s="7" data-simp="泰国、饭店房间、户外、车上，都可以。" data-trad="泰國、飯店房間、戶外、車上，都可以。">泰国、饭店房间、户外、车上，都可以。</span><span id="w-scale-zh-8" class="w" data-s="8" data-simp="这里面还藏了一个红利。" data-trad="這裏面還藏了一個紅利。">这里面还藏了一个红利。</span><span id="w-scale-zh-9" class="w" data-s="9" data-simp="第一集收到最尖锐的批评，就是声音太干净、语速太慢、太安静、没有口音、也没有背景噪音。" data-trad="第一集收到最尖銳的批評，就是聲音太乾淨、語速太慢、太安靜、沒有口音、也沒有背景噪音。">第一集收到最尖锐的批评，就是声音太干净、语速太慢、太安静、没有口音、也没有背景噪音。</span><span id="w-scale-zh-10" class="w" data-s="10" data-simp="跑到真实环境去拍，等于同时解决了规模化的问题和难度的问题。" data-trad="跑到真實環境去拍，等於同時解決了規模化的問題和難度的問題。">跑到真实环境去拍，等于同时解决了规模化的问题和难度的问题。</span><span id="w-scale-zh-11" class="w" data-s="11" data-simp="在吵闹的街上录的一段话，既比较好拍，也比较难听懂。" data-trad="在吵鬧的街上錄的一段話，既比較好拍，也比較難聽懂。">在吵闹的街上录的一段话，既比较好拍，也比较难听懂。</span></div>
+  </div>
+  <div class="lv-notes"></div>
+</section>
+
+<section class="lv-sec" data-key="risk">
+  <h2 class="lv-h"><span class="lv-en-text">The one thing that would kill it</span><span class="lv-zh-text lv-subt" data-simp="唯一会毁掉它的事" data-trad="唯一會毀掉它的事">唯一会毁掉它的事</span></h2>
+  
+  <div class="lv-group lv-en">
+    <button class="lv-au lv-en-audio" data-key="risk" data-lang="en">▶ EN</button>
+    <div class="lv-text lv-en-text" id="txt-risk-en"><span id="w-risk-en-0" class="w" data-s="0">The ideas have to stay inside the test.</span> <span id="w-risk-en-1" class="w" data-s="1">The moment an episode becomes a lecture about manifestation with a meter stuck on the side, the format is dead and it is just preaching with a gimmick.</span> <span id="w-risk-en-2" class="w" data-s="2">The discipline is that the passage has to work as a genuine listening passage first, and carry the idea second.</span> <span id="w-risk-en-3" class="w" data-s="3">Episode two survives this because whether to move out of your parents&#x27; house is a real argument that happens to be his.</span> <span id="w-risk-en-4" class="w" data-s="4">Episode three survives it because the suffering and grind question is a real argument too.</span> <span id="w-risk-en-5" class="w" data-s="5">Manifestation is further out, and it will need more craft to stay in format.</span> <span id="w-risk-en-6" class="w" data-s="6">That is a reason to get there slowly, not a reason to avoid it.</span></div>
+  </div>
+  <div class="lv-group lv-zh">
+    <button class="lv-au lv-zh-audio" data-key="risk" data-lang="zh">▶</button>
+    <div class="lv-text lv-zh-text" id="txt-risk-zh"><span id="w-risk-zh-0" class="w" data-s="0" data-simp="那些想法必须待在测验里面。" data-trad="那些想法必須待在測驗裏面。">那些想法必须待在测验里面。</span><span id="w-risk-zh-1" class="w" data-s="1" data-simp="一旦某一集变成一堂关于显化的讲课，旁边硬插一根刻度，这个格式就死了，那只是加了噱头的说教。" data-trad="一旦某一集變成一堂關於顯化的講課，旁邊硬插一根刻度，這個格式就死了，那只是加了噱頭的說教。">一旦某一集变成一堂关于显化的讲课，旁边硬插一根刻度，这个格式就死了，那只是加了噱头的说教。</span><span id="w-risk-zh-2" class="w" data-s="2" data-simp="真正的纪律是：那段话必须先能成立为一段真正的听力材料，其次才是承载观点。" data-trad="真正的紀律是：那段話必須先能成立爲一段真正的聽力材料，其次纔是承載觀點。">真正的纪律是：那段话必须先能成立为一段真正的听力材料，其次才是承载观点。</span><span id="w-risk-zh-3" class="w" data-s="3" data-simp="第二集撑得住，因为「要不要搬出去住」本来就是一个真实的争论，只是刚好也是他的立场。" data-trad="第二集撐得住，因爲「要不要搬出去住」本來就是一個真實的爭論，只是剛好也是他的立場。">第二集撑得住，因为「要不要搬出去住」本来就是一个真实的争论，只是刚好也是他的立场。</span><span id="w-risk-zh-4" class="w" data-s="4" data-simp="第三集撑得住，因为吃苦与成功同样是一个真实的争论。" data-trad="第三集撐得住，因爲喫苦與成功同樣是一個真實的爭論。">第三集撑得住，因为吃苦与成功同样是一个真实的争论。</span><span id="w-risk-zh-5" class="w" data-s="5" data-simp="显化再往外一点，需要更多功夫才能留在格式里。" data-trad="顯化再往外一點，需要更多功夫才能留在格式裏。">显化再往外一点，需要更多功夫才能留在格式里。</span><span id="w-risk-zh-6" class="w" data-s="6" data-simp="这是慢慢走过去的理由，不是回避它的理由。" data-trad="這是慢慢走過去的理由，不是迴避它的理由。">这是慢慢走过去的理由，不是回避它的理由。</span></div>
+  </div>
+  <div class="lv-notes"></div>
+</section>
+
+<section class="lv-sec" data-key="next">
+  <h2 class="lv-h"><span class="lv-en-text">What this means for the next few episodes</span><span class="lv-zh-text lv-subt" data-simp="接下来几集该怎么走" data-trad="接下來幾集該怎麼走">接下来几集该怎么走</span></h2>
+  
+  <div class="lv-group lv-en">
+    <button class="lv-au lv-en-audio" data-key="next" data-lang="en">▶ EN</button>
+    <div class="lv-text lv-en-text" id="txt-next-en"><span id="w-next-en-0" class="w" data-s="0">Keep the numbering, keep the cadence, and let the topics get spicier gradually.</span> <span id="w-next-en-1" class="w" data-s="1">Episode three is safely spicy, because plenty of people already disagree with the grind mindset and nobody thinks it is strange for a teacher to have a view on it.</span> <span id="w-next-en-2" class="w" data-s="2">Save the further out material until the tribe has sorted itself over four or five episodes.</span> <span id="w-next-en-3" class="w" data-s="3">The honest description of what this series is: the test is the delivery mechanism for his worldview, and the score is the reason anybody stays for it.</span> <span id="w-next-en-4" class="w" data-s="4">Nobody watches a sixty second monologue about reincarnation from an English teacher.</span> <span id="w-next-en-5" class="w" data-s="5">Everybody watches a test they can score themselves on.</span></div>
+  </div>
+  <div class="lv-group lv-zh">
+    <button class="lv-au lv-zh-audio" data-key="next" data-lang="zh">▶</button>
+    <div class="lv-text lv-zh-text" id="txt-next-zh"><span id="w-next-zh-0" class="w" data-s="0" data-simp="保持编号，保持节奏，让题目一集一集慢慢变辣。" data-trad="保持編號，保持節奏，讓題目一集一集慢慢變辣。">保持编号，保持节奏，让题目一集一集慢慢变辣。</span><span id="w-next-zh-1" class="w" data-s="1" data-simp="第三集是安全的辣，因为本来就有很多人不认同那套拼命至上的心态，而且没有人会觉得一个老师对这件事有立场很奇怪。" data-trad="第三集是安全的辣，因爲本來就有很多人不認同那套拼命至上的心態，而且沒有人會覺得一個老師對這件事有立場很奇怪。">第三集是安全的辣，因为本来就有很多人不认同那套拼命至上的心态，而且没有人会觉得一个老师对这件事有立场很奇怪。</span><span id="w-next-zh-2" class="w" data-s="2" data-simp="更外围的题材，等这群人在四五集里自己分完类之后再拿出来。" data-trad="更外圍的題材，等這羣人在四五集裏自己分完類之後再拿出來。">更外围的题材，等这群人在四五集里自己分完类之后再拿出来。</span><span id="w-next-zh-3" class="w" data-s="3" data-simp="诚实地描述这个系列到底是什么：测验是他世界观的载体，分数是别人愿意留下来的理由。" data-trad="誠實地描述這個系列到底是什麼：測驗是他世界觀的載體，分數是別人願意留下來的理由。">诚实地描述这个系列到底是什么：测验是他世界观的载体，分数是别人愿意留下来的理由。</span><span id="w-next-zh-4" class="w" data-s="4" data-simp="没有人会看一个英文老师讲六十秒的轮回。" data-trad="沒有人會看一個英文老師講六十秒的輪迴。">没有人会看一个英文老师讲六十秒的轮回。</span><span id="w-next-zh-5" class="w" data-s="5" data-simp="但每个人都会看一个自己可以打分的测验。" data-trad="但每個人都會看一個自己可以打分的測驗。">但每个人都会看一个自己可以打分的测验。</span></div>
+  </div>
+  <div class="lv-notes"></div>
+</section>
+</div>
+<div id="tp">
+  <button id="play">▶ Play loop</button>
+  <span id="st">Ready</span>
+  <input id="seek" type="range" min="0" max="1000" value="0" step="1">
+  <span id="tm">0:00 / 0:00</span>
+  <span class="sp">🐢<input id="spd" type="range" min="0.5" max="2" step="0.05" value="1">🐇<span id="spv">1.0×</span></span>
+  <span class="fs"><button id="fsdn">A−</button><button id="fsup">A+</button></span>
+</div>
+<script>
+(function(){
+  var SEC={"thesis": {"en": {"a": "audio/listening_series_reflection_LV_en_thesis.mp3", "t": [[0.1, 2.1, 0], [2.15, 3.45, 1], [5.6, 5.737, 2], [11.338, 4.425, 3], [15.762, 5.938, 4], [21.7, 1.038, 5], [22.738, 1.438, 6], [24.175, 1.438, 7], [25.613, 3.062, 8], [28.675, 6.963, 9], [35.638, 3.475, 10]]}, "zh": {"a": "audio/listening_series_reflection_LV_zh_thesis.mp3", "t": [[0.1, 2.388, 0], [2.438, 4.4, 1], [6.838, 6.2, 2], [13.037, 5.338, 3], [18.375, 5.888, 4], [24.262, 1.238, 5], [25.5, 1.163, 6], [26.663, 2.175, 7], [28.837, 3.712, 8], [32.55, 7.65, 9], [40.2, 5.35, 10]]}}, "open": {"en": {"a": "audio/listening_series_reflection_LV_en_open.mp3", "t": [[0.1, 3.413, 0], [3.462, 6.588, 1], [10.05, 4.8, 2], [14.85, 5.888, 3], [20.738, 1.962, 4], [22.7, 2.775, 5], [25.475, 7.725, 6], [33.2, 4.562, 7], [37.763, 2.1, 8], [39.862, 5.85, 9]]}, "zh": {"a": "audio/listening_series_reflection_LV_zh_open.mp3", "t": [[0.1, 3.35, 0], [3.4, 6.425, 1], [9.825, 3.837, 2], [13.662, 6.487, 3], [20.15, 2.237, 4], [22.387, 2.925, 5], [25.312, 8.812, 6], [34.125, 4.763, 7], [38.888, 1.762, 8], [40.65, 6.375, 9]]}}, "filter": {"en": {"a": "audio/listening_series_reflection_LV_en_filter.mp3", "t": [[0.1, 8.662, 0], [8.713, 2.688, 1], [11.4, 7.775, 2], [19.175, 2.362, 3], [21.538, 5.5, 4], [27.038, 7.987, 5], [35.025, 1.4, 6], [36.425, 4.15, 7], [40.575, 3.188, 8], [43.763, 3.513, 9], [47.275, 4.912, 10]]}, "zh": {"a": "audio/listening_series_reflection_LV_zh_filter.mp3", "t": [[0.1, 8.137, 0], [8.188, 3.087, 1], [11.275, 9.113, 2], [20.387, 2.8, 3], [23.188, 4.475, 4], [27.663, 7.8, 5], [35.462, 1.988, 6], [37.45, 4.025, 7], [41.475, 2.812, 8], [44.288, 4.162, 9], [48.45, 5.65, 10]]}}, "attention": {"en": {"a": "audio/listening_series_reflection_LV_en_attention.mp3", "t": [[0.1, 4.625, 0], [4.675, 7.1, 1], [11.775, 5.287, 2], [17.062, 5.425, 3], [22.488, 6.888, 4], [29.375, 2.263, 5]]}, "zh": {"a": "audio/listening_series_reflection_LV_zh_attention.mp3", "t": [[0.1, 4.325, 0], [4.375, 8.025, 1], [12.4, 6.525, 2], [18.925, 5.662, 3], [24.587, 7.612, 4], [32.2, 2.112, 5]]}}, "scale": {"en": {"a": "audio/listening_series_reflection_LV_en_scale.mp3", "t": [[0.1, 2.612, 0], [2.663, 3.362, 1], [6.025, 2.8, 2], [8.825, 2.962, 3], [11.787, 2.513, 4], [14.3, 3.163, 5], [17.462, 3.475, 6], [20.938, 5.013, 7], [25.95, 2.062, 8], [28.012, 9.125, 9], [37.138, 5.963, 10], [43.1, 5.725, 11]]}, "zh": {"a": "audio/listening_series_reflection_LV_zh_scale.mp3", "t": [[0.1, 3.587, 0], [3.638, 3.9, 1], [7.537, 3.638, 2], [11.175, 3.362, 3], [14.537, 2.2, 4], [16.738, 2.962, 5], [19.7, 4.412, 6], [24.113, 4.513, 7], [28.625, 2.337, 8], [30.962, 9.062, 9], [40.025, 6.188, 10], [46.212, 5.2, 11]]}}, "risk": {"en": {"a": "audio/listening_series_reflection_LV_en_risk.mp3", "t": [[0.1, 2.625, 0], [2.675, 9.188, 1], [11.863, 6.7, 2], [18.562, 6.675, 3], [25.238, 5.35, 4], [30.587, 4.838, 5], [35.425, 4.025, 6]]}, "zh": {"a": "audio/listening_series_reflection_LV_zh_risk.mp3", "t": [[0.1, 3.1, 0], [3.15, 9.425, 1], [12.575, 7.537, 2], [20.113, 7.9, 3], [28.012, 5.338, 4], [33.35, 4.8, 5], [38.15, 4.05, 6]]}}, "next": {"en": {"a": "audio/listening_series_reflection_LV_en_next.mp3", "t": [[0.1, 4.812, 0], [4.862, 9.425, 1], [14.287, 5.725, 2], [20.012, 8.762, 3], [28.775, 5.2, 4], [33.975, 3.225, 5]]}, "zh": {"a": "audio/listening_series_reflection_LV_zh_next.mp3", "t": [[0.1, 5.062, 0], [5.112, 10.925, 1], [16.038, 5.875, 2], [21.913, 8.238, 3], [30.15, 3.938, 4], [34.087, 4.088, 5]]}}}, keys=["thesis", "open", "filter", "attention", "scale", "risk", "next"];
+  var body=document.body, audio=new Audio(), queue=[], qi=-1, playing=false, cur=null, lastW=-1, lastS=-1;
+  // toggles
+  document.querySelectorAll('.bar label[data-cls]').forEach(function(l){
+    var cls=l.getAttribute('data-cls'), cb=l.querySelector('input');
+    function sync(){ body.classList.toggle(cls,!cb.checked); l.classList.toggle('on',cb.checked);
+      try{localStorage.setItem('lv2_'+cls,cb.checked?'1':'0');}catch(e){} build(); }
+    try{if(localStorage.getItem('lv2_'+cls)==='0')cb.checked=false;}catch(e){}
+    l.addEventListener('click',function(e){if(e.target!==cb)cb.checked=!cb.checked; sync();});
+    cb.addEventListener('click',function(e){e.stopPropagation();}); sync();
+  });
+  // order
+  var ord=document.getElementById('ord');
+  function setOrder(z){ body.classList.toggle('zh-first',z); ord.textContent=z?'中文 first ⇅':'English first ⇅';
+    try{localStorage.setItem('lv2_zhf',z?'1':'0');}catch(e){} build(); }
+  ord.addEventListener('click',function(){setOrder(!body.classList.contains('zh-first'));});
+  try{setOrder(localStorage.getItem('lv2_zhf')==='1');}catch(e){setOrder(false);}
+  // simplified / traditional toggle (display only; audio stays as recorded)
+  var sct=document.getElementById('sct'), tradOn=false;
+  function applyScript(){
+    document.querySelectorAll('[data-trad]').forEach(function(el){
+      el.textContent = tradOn ? el.getAttribute('data-trad') : el.getAttribute('data-simp'); });
+    sct.textContent = tradOn ? '繁 / 简' : '简 / 繁';
+    try{localStorage.setItem('lv2_trad',tradOn?'1':'0');}catch(e){}
+  }
+  try{tradOn=localStorage.getItem('lv2_trad')==='1';}catch(e){}
+  sct.addEventListener('click',function(){tradOn=!tradOn;applyScript();});
+  applyScript();
+  // auto-scroll toggle (when off, karaoke never moves the page; when on, only scrolls a line that is off-screen)
+  var ascb=document.getElementById('ascb'), aslbl=document.getElementById('aslbl');
+  function syncAS(){ aslbl.classList.toggle('on',ascb.checked); try{localStorage.setItem('lv2_as',ascb.checked?'1':'0');}catch(e){} }
+  try{if(localStorage.getItem('lv2_as')==='0')ascb.checked=false;}catch(e){}
+  aslbl.addEventListener('click',function(e){if(e.target!==ascb)ascb.checked=!ascb.checked; syncAS();});
+  ascb.addEventListener('click',function(e){e.stopPropagation();}); syncAS();
+  // font size
+  var FS=18; try{var fv=parseInt(localStorage.getItem('lv2_fs'),10); if(fv)FS=fv;}catch(e){}
+  function applyFS(){ FS=Math.max(13,Math.min(30,FS)); document.documentElement.style.setProperty('--read-fs',FS+'px'); try{localStorage.setItem('lv2_fs',FS);}catch(e){} }
+  document.getElementById('fsup').addEventListener('click',function(){FS+=1;applyFS();});
+  document.getElementById('fsdn').addEventListener('click',function(){FS-=1;applyFS();});
+  applyFS();
+  // speed
+  var spd=document.getElementById('spd'), spv=document.getElementById('spv');
+  function rate(){return parseFloat(spd.value)||1;}
+  function applyRate(){audio.playbackRate=rate();spv.textContent=rate().toFixed(2).replace(/0$/,'')+'×';}
+  try{var sv=localStorage.getItem('lv2_spd');if(sv)spd.value=sv;}catch(e){}
+  spd.addEventListener('input',function(){applyRate();try{localStorage.setItem('lv2_spd',spd.value);}catch(e){}});
+  applyRate();
+  // seek / scrub timeline (drag to go back and forth; audio + karaoke follow live)
+  var seek=document.getElementById('seek'), tm=document.getElementById('tm'), seeking=false;
+  function fmt(s){ s=Math.max(0,s||0); var m=Math.floor(s/60), x=Math.floor(s%60); return m+':'+(x<10?'0':'')+x; }
+  function updTime(){ var d=audio.duration||0, t=audio.currentTime||0; if(!seeking) seek.value=d?Math.round(t/d*1000):0; tm.textContent=fmt(t)+' / '+fmt(d); }
+  seek.addEventListener('input',function(){ seeking=true; var d=audio.duration||0; if(d){ var t=seek.value/1000*d; try{audio.currentTime=t;}catch(e){} tm.textContent=fmt(t)+' / '+fmt(d); } });
+  seek.addEventListener('change',function(){ seeking=false; });
+  audio.addEventListener('loadedmetadata', updTime);
+  // queue
+  function enabledLangs(){
+    var en=!body.classList.contains('hide-en-audio'), zh=!body.classList.contains('hide-zh-audio'), zf=body.classList.contains('zh-first');
+    var a=[]; if(zf){if(zh)a.push('zh');if(en)a.push('en');}else{if(en)a.push('en');if(zh)a.push('zh');} return a;
+  }
+  function build(){ var L=enabledLangs(); queue=[];
+    keys.forEach(function(k){ L.forEach(function(g){ if(SEC[k]&&SEC[k][g]&&SEC[k][g].t.length) queue.push({k:k,lang:g}); }); });
+    if(qi>=queue.length)qi=-1;
+  }
+  function clearHi(){ document.querySelectorAll('.w.kara,.w.kara-sent').forEach(function(x){x.classList.remove('kara','kara-sent');}); }
+  function clearBtns(){ document.querySelectorAll('.lv-au.on').forEach(function(x){x.classList.remove('on');}); }
+  // highlight sentence s in BOTH languages for section k; word i in playing lang
+  function paint(k, lang, i){
+    var s = SEC[k][lang].t[i] ? SEC[k][lang].t[i][2] : -1;
+    if(s===lastS && i===lastW) return;
+    clearHi();
+    ['en','zh'].forEach(function(g){
+      var box=document.getElementById('txt-'+k+'-'+g); if(!box)return;
+      box.querySelectorAll('.w[data-s="'+s+'"]').forEach(function(w){w.classList.add('kara-sent');});
+    });
+    var cw=document.getElementById('w-'+k+'-'+lang+'-'+i);
+    if(cw){ cw.classList.add('kara');
+      if(s!==lastS && ascb.checked){
+        var r=cw.getBoundingClientRect(), vh=window.innerHeight||document.documentElement.clientHeight;
+        // only scroll when the lit line is off-screen, so it won't yank the page while you're reading
+        if(r.top<70 || r.bottom>vh-90) cw.scrollIntoView({block:'center',behavior:'smooth'});
+      }
+    }
+    lastS=s; lastW=i;
+  }
+  audio.addEventListener('timeupdate', function(){
+    updTime();
+    if(!cur) return; var arr=SEC[cur.k][cur.lang].t, t=audio.currentTime, i=0;
+    // last token whose start <= t
+    var lo=0, hi=arr.length-1; while(lo<=hi){var m=(lo+hi)>>1; if(arr[m][0]<=t){i=m;lo=m+1;}else hi=m-1;}
+    paint(cur.k, cur.lang, i);
+  });
+  document.querySelectorAll('.lv-au').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-key'), g=b.getAttribute('data-lang');
+      if(playing && cur && cur.k===k && cur.lang===g){ audio.pause(); stop(); return; }
+      build(); var idx=queue.findIndex(function(q){return q.k===k&&q.lang===g;});
+      playAt(idx>=0?idx:0);
+    });
+  });
+  function stop(){playing=false;clearBtns();document.getElementById('play').textContent='▶ Play loop';document.getElementById('st').textContent='Paused';}
+  function playAt(i, seekTo){
+    if(i<0||i>=queue.length){playing=false;clearBtns();clearHi();document.getElementById('play').textContent='▶ Play loop';document.getElementById('st').textContent='Done';return;}
+    qi=i; cur=queue[i]; lastW=-1; lastS=-1; clearBtns();
+    var b=document.querySelector('.lv-'+cur.lang+'-audio[data-key="'+cur.k+'"]'); if(b)b.classList.add('on');
+    var src=SEC[cur.k][cur.lang].a;
+    var go=function(){ try{audio.currentTime=seekTo||0;}catch(e){} applyRate(); audio.play(); };
+    if(audio.src && audio.src.indexOf(src)>-1 && audio.readyState>=1){ go(); }
+    else { audio.src=src; var once=function(){ audio.removeEventListener('loadedmetadata',once); go(); }; audio.addEventListener('loadedmetadata',once); }
+    playing=true;
+    document.getElementById('play').textContent='❚❚ Pause';
+    document.getElementById('st').textContent=(cur.lang==='zh'?'中文':'EN')+' · '+(qi+1)+'/'+queue.length;
+  }
+  // click anywhere on a sentence -> start playing from there (karaoke follows)
+  function playFrom(key, lang, i){
+    build();
+    if(!SEC[key]||!SEC[key][lang]||!SEC[key][lang].t.length) return;
+    var seekTo = SEC[key][lang].t[i] ? SEC[key][lang].t[i][0] : 0;
+    var q = queue.findIndex(function(x){return x.k===key&&x.lang===lang;});
+    if(q<0){ queue=[{k:key,lang:lang}]; q=0; }
+    playAt(q, seekTo);
+  }
+  document.querySelectorAll('.lv-text').forEach(function(box){
+    box.addEventListener('click', function(e){
+      var w = e.target.closest ? e.target.closest('.w') : null;
+      if(!w) return;
+      var m = w.id.match(/^w-(.+)-(en|zh)-(\d+)$/); if(!m) return;
+      playFrom(m[1], m[2], parseInt(m[3],10));
+    });
+  });
+  audio.addEventListener('ended',function(){ playAt(qi+1); });
+  document.addEventListener('keydown',function(e){
+    if(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName))return;
+    if(e.key==='k'||e.key==='K'){e.preventDefault(); if(!queue.length)build(); if(queue.length)playAt(qi<0?0:qi+1);}
+    else if(e.key==='j'||e.key==='J'){e.preventDefault(); if(queue.length)playAt(Math.max(0,qi-1));}
+    else if(e.code==='Space'){e.preventDefault(); document.getElementById('play').click();}
+  });
+  document.getElementById('play').addEventListener('click',function(){
+    if(playing){audio.pause();stop();return;}
+    build(); if(!queue.length){document.getElementById('st').textContent='No audio blocks on';return;}
+    playAt(qi>=0&&qi<queue.length?qi:0);
+  });
+  build();
+})();
+</script>
+</body></html>
